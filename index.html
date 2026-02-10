@@ -6,10 +6,47 @@
 
   <!-- FullCalendar CSS -->
   <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+
+  <style>
+    /* 공지사항 스타일 */
+    #notice {
+      background-color: #f5f7fa;
+      border: 1px solid #dcdfe6;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    #notice h3 {
+      margin: 0 0 8px 0;
+      font-size: 18px;
+    }
+
+    #notice ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    #notice li {
+      margin-bottom: 6px;
+    }
+  </style>
 </head>
 <body>
 
   <h2>📅 BRCHC 영업본부 공유 일정</h2>
+
+  <!-- ✅ 공지사항 영역 -->
+  <div id="notice">
+    <h3>📢 공지사항</h3>
+    <ul>
+      <li>2/20(목) 전사 휴무</li>
+      <li>2/25(화) 영업 전략 워크숍</li>
+      <li>신규 입사자 OT 일정은 추후 공지</li>
+    </ul>
+  </div>
+
+  <!-- 캘린더 -->
   <div id="calendar"></div>
 
   <!-- FullCalendar Core -->
@@ -39,5 +76,3 @@
 
 </body>
 </html>
-
-
