@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>전사 일정 캘린더</title>
+
+  <!-- FullCalendar CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <h2>📅 전사 공용 일정</h2>
+  <div id="calendar"></div>
+
+  <!-- FullCalendar Core -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
+  <!-- Google Calendar Plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.8/index.global.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var calendarEl = document.getElementById('calendar');
+
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        locale: 'ko',
+
+        googleCalendarApiKey: 'AIzaSyDdoymDkoymoi-lvka14ed8CrhDusoWn-A',
+
+        events: {
+          googleCalendarId: '2f2a457e4d382e65a7854e3c7d58b429279b8b8b2b3b636f88c080ae162ebcdf@group.calendar.google.com'
+        }
+      });
+
+      calendar.render();
+    });
+  </script>
+
+</body>
+</html>
